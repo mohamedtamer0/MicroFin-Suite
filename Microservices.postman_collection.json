@@ -303,12 +303,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8082/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"create"
@@ -329,12 +329,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/fetch?mobileNumber=4354437687",
+							"raw": "http://localhost:8082/api/fetch?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"fetch"
@@ -356,7 +356,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"mobileNumber\": \"4354437687\",\n    \"cardNumber\": \"100107091026\",\n    \"cardType\": \"Debit Card\",\n    \"totalLimit\": 100000,\n    \"amountUsed\": 10000,\n    \"availableAmount\": 90000\n}",
+							"raw": "{\n    \"mobileNumber\": \"4354437687\",\n    \"cardNumber\": \"100107091026\",\n    \"cardType\": \"Debit Card\",\n    \"totalLimit\": 100000,\n    \"amountUsed\": 10000,\n    \"availableAmount\": 80820\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -364,12 +364,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9000/api/update",
+							"raw": "http://localhost:8082/api/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"update"
@@ -384,12 +384,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/delete?mobileNumber=4354437687",
+							"raw": "http://localhost:8082/api/delete?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"delete"
@@ -410,12 +410,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/build-info",
+							"raw": "http://localhost:8082/api/build-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"build-info"
@@ -430,12 +430,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/java-version",
+							"raw": "http://localhost:8082/api/java-version",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"java-version"
@@ -450,12 +450,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/api/contact-info",
+							"raw": "http://localhost:8082/api/contact-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"api",
 								"contact-info"
@@ -479,12 +479,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:9000/actuator/refresh",
+							"raw": "http://localhost:8082/actuator/refresh",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"actuator",
 								"refresh"
@@ -499,12 +499,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9000/actuator/shutdown",
+							"raw": "http://localhost:8082/actuator/shutdown",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "9000",
+							"port": "8082",
 							"path": [
 								"actuator",
 								"shutdown"
@@ -577,7 +577,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"mobileNumber\": \"4354437687\",\n    \"loanNumber\": \"10071469799154\",\n    \"loanType\": \"Vehicle Loan\",\n    \"totalLoan\": -100000,\n    \"amountPaid\": -10000,\n    \"outstandingAmount\": -90000\n}",
+							"raw": "{\n    \"mobileNumber\": \"4354437687\",\n    \"loanNumber\": \"10071469799154\",\n    \"loanType\": \"Vehicle Loan\",\n    \"totalLoan\": -100000,\n    \"amountPaid\": -10000,\n    \"outstandingAmount\": -80820\n}",
 							"options": {
 								"raw": {
 									"language": "json"
