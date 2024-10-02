@@ -1,10 +1,13 @@
 package com.tamer.accounts.service.impl;
 
 import com.tamer.accounts.constants.AccountsConstants;
+import com.tamer.accounts.dto.AccountsDto;
 import com.tamer.accounts.dto.CustomerDto;
 import com.tamer.accounts.entity.Accounts;
 import com.tamer.accounts.entity.Customer;
 import com.tamer.accounts.exception.CustomerAlreadyExistsException;
+import com.tamer.accounts.exception.ResourceNotFoundException;
+import com.tamer.accounts.mapper.AccountsMapper;
 import com.tamer.accounts.mapper.CustomerMapper;
 import com.tamer.accounts.repository.AccountsRepository;
 import com.tamer.accounts.repository.CustomerRepository;
@@ -55,9 +58,21 @@ public class AccountsServiceImpl implements IAccountsService {
         return newAccount;
     }
 
+    /**
+     * @param mobileNumber - Input Mobile Number
+     * @return Accounts Details based on a given mobileNumber
+     */
     @Override
     public CustomerDto fetchAccount(String mobileNumber) {
-        return null;
+        Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber)
+        );
+        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(
+                () -> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId().toString())
+        );
+        CustomerDto customerDto = CustomerMapper.mapToCustomerDto(customer, new CustomerDto());
+        customerDto.setAccountsDto(AccountsMapper.mapToAccountsDto(accounts, new AccountsDto()));
+        return customerDto;
     }
 
     @Override
