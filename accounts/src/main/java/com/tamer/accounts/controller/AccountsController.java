@@ -6,9 +6,11 @@ import com.tamer.accounts.dto.CustomerDto;
 import com.tamer.accounts.dto.ResponseDto;
 import com.tamer.accounts.service.IAccountsService;
 import jakarta.validation.Valid;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,9 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
+@AllArgsConstructor
+@Validated
 public class AccountsController {
 
-    
+
     private IAccountsService iAccountsService;
 
     @PostMapping("/create")
