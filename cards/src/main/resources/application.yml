@@ -1,9 +1,12 @@
+# src/main/resources/application.yml
+
 server:
-  port: 8082
+  port: 8082  # Change to your desired port number
+
 spring:
   datasource:
+    driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
     username: sa
     password: ''
   h2:
@@ -14,3 +17,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

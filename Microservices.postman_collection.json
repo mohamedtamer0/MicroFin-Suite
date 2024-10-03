@@ -524,12 +524,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/create?mobileNumber=4354437687",
+							"raw": "http://localhost:8083/api/create?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"create"
@@ -550,12 +550,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/fetch?mobileNumber=4354437687",
+							"raw": "http://localhost:8083/api/fetch?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"fetch"
@@ -585,12 +585,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8090/api/update",
+							"raw": "http://localhost:8083/api/update",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"update"
@@ -605,12 +605,12 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/delete?mobileNumber=4354437687",
+							"raw": "http://localhost:8083/api/delete?mobileNumber=4354437687",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"delete"
@@ -631,12 +631,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/build-info",
+							"raw": "http://localhost:8083/api/build-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"build-info"
@@ -651,12 +651,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/java-version",
+							"raw": "http://localhost:8083/api/java-version",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"java-version"
@@ -671,12 +671,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/api/contact-info",
+							"raw": "http://localhost:8083/api/contact-info",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"api",
 								"contact-info"
@@ -700,12 +700,12 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8090/actuator/refresh",
+							"raw": "http://localhost:8083/actuator/refresh",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"actuator",
 								"refresh"
@@ -720,12 +720,12 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8090/actuator/shutdown",
+							"raw": "http://localhost:8083/actuator/shutdown",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
-							"port": "8090",
+							"port": "8083",
 							"path": [
 								"actuator",
 								"shutdown"
