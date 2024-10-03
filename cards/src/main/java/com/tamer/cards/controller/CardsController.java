@@ -1,4 +1,4 @@
-package com.tamer.cards.cotroller;
+package com.tamer.cards.controller;
 
 import com.tamer.cards.constants.CardsConstants;
 import com.tamer.cards.dto.CardsDto;
