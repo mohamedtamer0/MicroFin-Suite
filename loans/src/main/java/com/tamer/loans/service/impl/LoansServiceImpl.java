@@ -3,6 +3,8 @@ package com.tamer.loans.service.impl;
 import com.tamer.loans.constants.LoansConstants;
 import com.tamer.loans.dto.LoansDto;
 import com.tamer.loans.entity.Loans;
+import com.tamer.loans.exception.LoanAlreadyExistsException;
+import com.tamer.loans.exception.ResourceNotFoundException;
 import com.tamer.loans.mapper.LoansMapper;
 import com.tamer.loans.repository.LoansRepository;
 import com.tamer.loans.service.ILoansService;
@@ -23,9 +25,9 @@ public class LoansServiceImpl implements ILoansService {
      */
     @Override
     public void createLoan(String mobileNumber) {
-        Optional<Loans> optionalLoans= loansRepository.findByMobileNumber(mobileNumber);
-        if(optionalLoans.isPresent()){
-            throw new LoanAlreadyExistsException("Loan already registered with given mobileNumber "+mobileNumber);
+        Optional<Loans> optionalLoans = loansRepository.findByMobileNumber(mobileNumber);
+        if (optionalLoans.isPresent()) {
+            throw new LoanAlreadyExistsException("Loan already registered with given mobileNumber " + mobileNumber);
         }
         loansRepository.save(createNewLoan(mobileNumber));
     }
@@ -47,7 +49,6 @@ public class LoansServiceImpl implements ILoansService {
     }
 
     /**
-     *
      * @param mobileNumber - Input mobile Number
      * @return Loan Details based on a given mobileNumber
      */
@@ -60,7 +61,6 @@ public class LoansServiceImpl implements ILoansService {
     }
 
     /**
-     *
      * @param loansDto - LoansDto Object
      * @return boolean indicating if the update of loan details is successful or not
      */
@@ -70,7 +70,7 @@ public class LoansServiceImpl implements ILoansService {
                 () -> new ResourceNotFoundException("Loan", "LoanNumber", loansDto.getLoanNumber()));
         LoansMapper.mapToLoans(loansDto, loans);
         loansRepository.save(loans);
-        return  true;
+        return true;
     }
 
     /**
