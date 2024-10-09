@@ -1,0 +1,12 @@
+build:
+  version: "3.0"
+
+
+loans:
+  message: "Welcome to MicroFin-Suite loans related local APIs "
+  contactDetails:
+    name: "Mohamed Tamer"
+    email: "mohamedtamerdev@gmail.com"
+  onCallSupport:
+    - +201159749780
+    - +201032105166

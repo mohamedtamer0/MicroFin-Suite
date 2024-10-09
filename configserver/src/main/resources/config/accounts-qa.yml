@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to MicroFin-Suite accounts related QA APIs "
+  contactDetails:
+    name: "Mohamed Tamer"
+    email: "mohamedtamerdev@gmail.com"
+  onCallSupport:
+    - +201159749780
+    - +201032105166
