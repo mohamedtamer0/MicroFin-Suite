@@ -14,3 +14,23 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "qa"
+
+build:
+  version: "3.0"
+
+
+loans:
+  message: "Welcome to MicroFin-Suite loans related local APIs "
+  contactDetails:
+    name: "Mohamed Tamer"
+    email: "mohamedtamerdev@gmail.com"
+  onCallSupport:
+    - +201159749780
+    - +201032105166
