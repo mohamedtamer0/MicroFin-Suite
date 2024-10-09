@@ -25,3 +25,9 @@ spring:
         format_sql: true
   config:
     import: "optional:configserver:http://localhost:8084/"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
