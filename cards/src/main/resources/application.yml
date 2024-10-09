@@ -2,8 +2,11 @@
 
 server:
   port: 8082  # Change to your desired port number
-
 spring:
+  application:
+    name: "cards"
+  profiles:
+    active: "prod"
   datasource:
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:testdb
@@ -21,22 +24,4 @@ spring:
       hibernate:
         format_sql: true
   config:
-    import:
-      - "application_qa.yml"
-      - "application_prod.yml"
-  profiles:
-    active:
-      - "qa"
-
-build:
-  version: "3.0"
-
-
-cards:
-  message: "Welcome to MicroFin-Suite cards related local APIs "
-  contactDetails:
-    name: "Mohamed Tamer"
-    email: "mohamedtamerdev@gmail.com"
-  onCallSupport:
-    - +201159749780
-    - +201032105166
+    import: "optional:configserver:http://localhost:8084/"
