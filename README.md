@@ -11,6 +11,7 @@ This project demonstrates the implementation of **Microservices Architecture** u
 - [Getting Started](#getting-started)
 - [Project Structure](#project-structure)
 - [Configuration Files](#configuration-files)
+- [Config Server Configuration](#config-server-configuration)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -131,6 +132,59 @@ The project includes several YAML configuration files for different environments
 - **`loans-prod.yml`**: Configuration for production environment.
 - **`loans-qa.yml`**: Configuration for QA environment.
 - **`loans.yml`**: Default configuration.
+
+# 📜 Config Server Configuration
+
+This section describes the configuration for the Config Server in the MicroFin-Suite project.
+
+## YAML Configuration
+
+The `application.yml` file configures the Config Server to use a Git repository for centralized configuration management.
+
+```yaml
+spring:
+  application:
+    name: "configserver"
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/mohamedtamer0/MicroFin-config.git"
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
+  rabbitmq:
+    host: "localhost"
+    port: 5672
+    username: "guest"
+    password: "guest"
+
+encrypt:
+  key: "45D81EC1EF61DF9AD8D3E5BB397F9"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+server:
+  port: 8084
+```
+
+
 
 # 📖 Usage
 
